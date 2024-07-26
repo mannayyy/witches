@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> diorama </title>
+<link href="dioramaStyle.css" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Headland+One&family=Joti+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- nav bar -->
+
+<ul id = "nav">
+	<li><h2 id = "title">A Deal with the Devil</h2></li>
+	<li><img id = "logo" src = "images/logo.png" height = "40px"></li>
+    <li><a href="bibliography.html" class = "reg">Bibliography</a></li>
+    <li><a href="diorama.html" class = "active">Diorama</a></li>
+    <li><a href="witchHome.html" class="reg">Home</a></li>
+</ul>
+
+<!-- nav bar -->
+
+<!-- witch jumpscare -->
+
+<img class = "bigPic" src = "images/black.jpg">
+<img class = "jumpscare" src = "images/WITCH.png">
+
+<!-- insert witches laughing when they get it wrong -->
+
+<h1>The <span style = "color: red">Diorama</span></h1>
+
+<main class = "main">
+	<section class = "instruct">
+		<section class = "title">
+			<h2>Instructions:</h1>
+		</section>
+		<br>
+		<section class = "info">
+			<p>In front of you are three women being interrogated by a judge.</p>
+			<p>Acting as the judge, you will read the stories of the three women (the notecards)</p>
+			<p>and decide which one is the real witch you should send to the gallows.</p>
+			<p>Once you have made up your mind, enter your guess in the textbox below</p>
+			<p>and see whether or not you made the right call or not.</p>
+			<h2 style = "color: red;">GOOD LUCK!</h2>
+		</section>
+	</section>
+	<section class = "enter">
+		<input type="text" id="guess">
+		<button class = "submit" onclick="myFunction()">SUBMIT</button>
+	</section>
+	<section class = "guesses">
+		<div id = "answer">
+		</div>
+		<div id = "womenInfo">
+			<h2 style = "color: red">RESULT</h2>
+		</div>
+	</section>
+	<br>
+</main>
+
+<footer class = "footer">
+	<p>Coded by Manahil A 💌</p>
+	<p style = "display: inline;">Copyright © A Deal With The Devil 2023 &nbsp; &nbsp;&nbsp; </p> 
+	<img src = "images/logo.png">
+</footer>
+
+<script src = "diorama.js"></script>
+</body>
+</html>

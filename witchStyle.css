@@ -1,0 +1,415 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden
+}
+
+*,*:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#nav {
+	list-style-type: none;
+	background: rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+#nav li {
+	display: inline;
+}
+
+#nav li a {
+	padding: 14px 16px;
+	text-align: center;
+	font-family: 'Joti One', cursive;
+	text-decoration: none;
+	font-size: 20px;
+	opacity: .5;
+	float: right;
+}
+
+.active {
+	color: red;
+}
+
+.reg {
+	color: white;
+}
+
+#nav li h2 {
+	text-align: center;
+	color: white;
+	font-family: 'Joti One', cursive;
+	text-decoration: none;
+	font-size: 20px;
+	opacity: .5;
+	float: left;
+	margin-left: 30px;
+}
+
+#nav li a:hover {
+	opacity: 1;
+}
+
+#nav li h2:hover {
+	opacity: 1;
+	cursor: default;
+	color: red;
+}
+
+#logo {
+	opacity: .75;
+	margin-top: .6%;
+	margin-left: .6%;
+}
+
+/* nav ends */
+
+h2 {
+	font-family: 'Joti One', cursive;
+	color: #4A314D;
+}
+	
+p {
+	font-family: 'Headland One', serif;
+	color: #4A314D;
+	word-spacing: 4px;
+	letter-spacing: 1px;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+      background: url("images/posterMain.png") no-repeat;
+      background-size: cover;
+    }
+}
+
+
+/* add cobwebs to the sides */
+
+main {
+	background-color: #311D2D;
+	margin-top: 100vh;
+	padding: 10px;
+	position: relative;
+	text-align: center;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	opacity: .975;
+}
+
+.RQ {
+	width: 500px;
+	height: 170px;
+	background-color: red;
+	padding: 10px;
+	line-height: 25px;
+	margin: 20px 20px 40px 20px;
+	box-shadow: 10px 10px white;
+	transition: transform .2s;
+	border: 2px solid black;
+}
+
+.RQ:hover {
+	-ms-transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15); 
+}
+
+.RQ p {
+	color: white;
+}
+
+.RQ h2{ 
+	color: white;
+}
+
+.complete {
+	width: 90%;
+	background-color: #A8BA9A;
+	border-radius: 20px;
+	border: 2px solid black;
+}
+
+.intro {
+	background-color: white;
+	padding: 5px;
+	width: 30%;
+	margin-top: 30px;
+	position: relative;
+	left: 35%;
+	border-radius: inherit;
+	border: 2px solid #4A314D;
+}
+
+.intro h2 {
+	font-size: 36px;
+	color: #4A314D;
+}
+
+.timeline ul {
+	padding: 50px 0;
+}
+
+.timeline ul li {
+	list-style: none;
+	position: relative;
+	width: 6px;
+	margin: 0 auto;
+	padding-top: 50px;
+	background-color: white;
+	border: 1px solid #4A314D;
+}
+
+.timeline time {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 8px;
+	font-weight: 700;
+	font-family: 'Joti One', cursive;
+}
+
+.timeline ul li:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	transition: all 0.5s;
+	background-color: inherit;
+	z-index: 1;
+	border: 1px solid #4A314D;
+}
+
+.timeline ul li div {
+	position: relative;
+	bottom: 0;
+	width: 500px;
+	padding: 15px;
+	background-color: #ACE894;
+	transition: all 0.5s;
+	opacity: 0;
+	border-radius: 20px;
+	border: 2px solid #4A314D;
+}
+
+.timeline ul li:nth-child(odd) div {
+	left: 45px;
+	transform: translateX(100px);
+}
+
+.timeline ul li:nth-child(even) div {
+	left: calc(-500px - 45px + 6px);
+	transform: translateX(-100px);
+}
+
+.timeline ul li.in-view:after{
+	background-color: #ACE894;
+}
+
+.timeline ul li.in-view div{
+	transform: none !important;
+	opacity: 1;
+}
+
+.portrayal {
+	color: white;
+	font-size: 30px;
+	margin-top: 40px;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+	height: 60px;
+}
+
+.slide h2 {
+	color: red;
+}
+
+.slide p {
+	color: white;
+}
+
+#slider {
+	height: 850px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 1600px;
+	margin: auto;
+}
+
+.subcontainer {
+	width: 55%;
+	margin: auto;
+}
+
+.slide-img {
+	width: 100%;
+	height: 540px;
+	border-radius: 5px;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	padding: 40px;
+}
+
+.slide-img:hover {
+	box-shadow: 0 0 0 575px rgba(0, 0, 0, 0.9) inset;
+}
+
+.slide-img a {
+	opacity: 0;
+	text-decoration: none;
+	transform: scale(0);
+	transition: 0.8s;
+	font-size: 1.rem;
+	color: white;
+	font-family: 'Headland One', serif;
+	line-height: 30px;
+	word-spacing: 4px;
+	letter-spacing: 1px;
+}
+
+.slide-img:hover a{
+	opacity: 1;
+	transform: scale(1);
+}
+
+.slide-img ul {
+	text-align: left;
+}
+
+.img-1 {
+	background-image: url("images/malleus.jpg");
+}
+
+.img-2 {
+	background-image: url("images/chaotic.jpg");
+}
+
+.img-3 {
+	background-image: url("images/matthew.jpg");
+}
+
+.img-4 {
+	background-image: url("images/sabbath.jpg");
+}
+
+@media(max-width: 1600px) {
+	.container {
+		width: 100%;
+	}
+}
+
+.attribution {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+	transition: transform .1s;
+	height: 170px;
+}
+
+.attribution:hover {
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1); 
+}
+
+.fixed-bg {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+	color: white;
+	text-align: center;
+	display: table;
+}
+
+.fixed-bg p {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 500px;
+}
+
+#identity {
+	background-color: #AAD197;
+	margin-top: 15vh;
+	border: 2px solid #4A314D;
+}
+
+.scroll-bg {
+	background-color: #AAD197;
+	padding: 40px 70px;
+	color: white;
+	border: 2px solid #4A314D;
+}
+
+.scroll-bg a {
+	color: red;
+}
+
+.bg-1 {
+	background-image: url(images/accusation.jpg);
+}
+
+.bg-2 {
+	background-image: url(images/MARTHA.jpg);
+}
+
+.bg-3 {
+	background-image: url(images/nehemiah.jpg);
+}
+
+footer {
+	padding: 15px 0;
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+	background: rgba(0, 0, 0, 0.75);
+	overflow: hidden;
+}
+
+.footer img {
+	width: 3%;
+	display: inline;
+	top: 42%;
+	left: 61.5%;
+	position: absolute;
+}
+
+.footer p {
+	margin-top: 15px;
+	color: white;
+}
